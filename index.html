@@ -11,6 +11,22 @@
 
     <title>MMAXIN Development</title>
 
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="js/jquery.circlechart.js"></script>
+    <style>
+        .charts {
+          max-width: 960px;
+          margin: 150px auto;
+          text-align: center;
+        }
+
+        .charts > div {
+          float: left;
+          margin: 20px;
+        }
+    </style>
+
+
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -32,8 +48,10 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-</head>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="js/jquery.circlechart.js"></script>
 
+</head>
 <body id="page-top">
 
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
@@ -50,13 +68,13 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a class="page-scroll" href="#about">Technical Skills</a>
+                        <a class="page-scroll" href="#technicalSkills">Technical Skills</a> <!-- #about -->
                     </li>
                     <li>
-                        <a class="page-scroll" href="#services">Experience &amp; Education</a>
+                        <a class="page-scroll" href="#experience">Experience &amp; Education</a>  <!-- #services -->
                     </li>
                     <li>
-                        <a class="page-scroll" href="#portfolio">Projects</a>
+                        <a class="page-scroll" href="#projects">Projects</a> <!-- #portfolio -->
                     </li>
                     <li>
                         <a class="page-scroll" href="#contact">Contact</a>
@@ -71,28 +89,64 @@
     <header>
         <div class="header-content">
             <div class="header-content-inner">
-                <h1 id="homeHeading">Your Favorite Source of Free Bootstrap Themes</h1>
+                <h1 id="homeHeading">Hello, I'm Michael</h1>
                 <hr>
                 <p>Start Bootstrap can help you build better websites using the Bootstrap CSS framework! Just download your template and start going, no strings attached!</p>
-                <a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
+                <a href="#technicalSkills" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
             </div>
         </div>
     </header>
 
-    <section class="bg-primary" id="about">
+    <section class="bg-primary" id="technicalSkills">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                     <h2 class="section-heading">We've got what you need!</h2>
                     <hr class="light">
                     <p class="text-faded">Start Bootstrap has everything you need to get your new website up and running in no time! All of the templates and themes on Start Bootstrap are open source, free to download, and easy to use. No strings attached!</p>
-                    <a href="#services" class="page-scroll btn btn-default btn-xl sr-button">Get Started!</a>
+
+                    <div class="charts">
+                          <div class="charts-1" data-percent="90"> HTML </div>
+                          <div class="charts-2" data-percent="90"> CSS </div>
+                          <div class="charts-3" data-percent="80"> Java </div>
+                          <div class="charts-4" data-percent="70"> C++ </div>
+                          <div class="charts-5" data-percent="70"> C </div>
+                          <div class="charts-6" data-percent="70"> VBA </div>
+                          <div class="charts-7" data-percent="60"> Swift </div>
+                          <div class="charts-8" data-percent="50"> Python </div>
+                          <div class="charts-9" data-percent="80"> Javascript </div>
+                          <div class="charts-10" data-percent="60"> Unix Scripting </div>
+                    </div>
+                    <script>
+                    $('.charts-1').percentcircle();
+                    $('.charts-2').percentcircle();
+                    $('.charts-3').percentcircle();
+                    $('.charts-4').percentcircle();
+                    $('.charts-5').percentcircle();
+                    $('.charts-6').percentcircle();
+                    $('.charts-7').percentcircle();
+                    $('.charts-8').percentcircle();
+                    $('.charts-9').percentcircle();
+                    $('.charts-10').percentcircle();
+                    /*$('.demo-3').percentcircle({
+                    animate : true,
+                    diameter : 100,
+                    guage: 3,
+                    coverBg: '#fff',
+                    bgColor: '#efefef',
+                    fillColor: '#DA4453',
+                    percentSize: '18px',
+                    percentWeight: 'normal'
+                    });*/  
+                    </script>
+
+                    <a href="#experience" class="page-scroll btn btn-default btn-xl sr-button">Get Started!</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="services">
+    <section id="experience">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -135,7 +189,7 @@
         </div>
     </section>
 
-    <section class="no-padding" id="portfolio">
+    <section class="no-padding" id="projects">
         <div class="container-fluid">
             <div class="row no-gutter popup-gallery">
                 <div class="col-lg-4 col-sm-6">
