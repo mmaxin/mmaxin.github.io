@@ -1,0 +1,11 @@
+.charts {
+  	max-width: 960px;
+  	margin: auto;
+  	text-align: center;
+}
+
+.charts > div {
+  	float: left;
+  	margin: 24.5px;
+  	text-align: center;
+}
