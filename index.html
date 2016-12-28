@@ -13,6 +13,7 @@
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="js/jquery.circlechart.js"></script>
+    <script src="js/tether.min.js"></script>
     <link href="css/custom.css" rel="stylesheet">
 
 
@@ -38,7 +39,6 @@
     <![endif]-->
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="js/jquery.circlechart.js"></script>
 
 </head>
 <body id="page-top">
@@ -90,23 +90,25 @@
     <div class="call-to-action">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
+                <div class="col-lg-10 col-lg-offset-1 text-center">
                     <h2 class="section-heading">Skills</h2>
                     <hr class="light">
                     <p class="text-faded">My primary skills are below, however I have also dabbled in Ruby, Perl, PHP, ASP, XML, JSON, WordPress, and Joomla</p>
-                    <div class="charts">
-                          <div class="charts-1" data-percent="90"> HTML </div>
-                          <div class="charts-2" data-percent="90"> CSS </div>
-                          <div class="charts-3" data-percent="80"> Java </div>
-                          <div class="charts-4" data-percent="70"> C++ </div>
-                          <div class="charts-5" data-percent="70"> C </div>
-                          <div class="charts-6" data-percent="70"> VBA </div>
-                          <div class="charts-7" data-percent="60"> Swift </div>
-                          <div class="charts-8" data-percent="50"> Python </div>
-                          <div class="charts-9" data-percent="80"> Javascript </div>
-                          <div class="charts-10" data-percent="60"> Unix Scripting </div>
+                    <div class="col-lg-8 col-lg-offset-2 charts">
+                          <div data-toggle="tooltip" data-placement="top" title="Building dynamic and functional website from scratch...like this webpage" class="charts-1" data-percent="90"> HTML/CSS </div>  <!-- <a href="#" data-toggle="tooltip" title="Testing">HTML/CSS</a> -->
+                          <div data-toggle="tooltip" data-placement="top" title="temp" class="charts-2" data-percent="80"> Java </div>
+                          <div data-toggle="tooltip" data-placement="top" title="temp" class="charts-3" data-percent="60"> C/C++ </div>
+                          <div data-toggle="tooltip" data-placement="top" title="temp" class="charts-4" data-percent="70"> VBA </div>
+                          <div data-toggle="tooltip" data-placement="top" title="temp" class="charts-5" data-percent="60"> Swift </div>
+                          <div data-toggle="tooltip" data-placement="top" title="temp" class="charts-6" data-percent="50"> Python </div>
+                          <div data-toggle="tooltip" data-placement="top" title="temp" class="charts-7" data-percent="80"> Javascript </div>
+                          <div data-toggle="tooltip" data-placement="top" title="temp" class="charts-8" data-percent="60"> Unix Scripting </div>
                     </div>
                     <script>
+                    $(function () {
+                        $('[data-toggle="tooltip"]').tooltip({container: 'body'});
+                    });
+
                     $('.charts-1').percentcircle();
                     $('.charts-2').percentcircle();
                     $('.charts-3').percentcircle();
@@ -115,8 +117,6 @@
                     $('.charts-6').percentcircle();
                     $('.charts-7').percentcircle();
                     $('.charts-8').percentcircle();
-                    $('.charts-9').percentcircle();
-                    $('.charts-10').percentcircle();
                     /*$('.demo-3').percentcircle({
                     animate : true,
                     diameter : 100,
@@ -129,6 +129,8 @@
                     });*/  
                     </script>
 
+                </div>
+                <div class="text-center">
                     <a href="#experience" class="page-scroll btn btn-default btn-xl sr-button">Experience!</a>
                 </div>
             </div>
